@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 10:14:18 by doberste          #+#    #+#             */
-/*   Updated: 2025/08/25 10:14:21 by doberste         ###   ########.fr       */
+/*   Created: 2025/08/25 12:09:22 by doberste          #+#    #+#             */
+/*   Updated: 2025/08/25 12:09:23 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
+#include <string.h>
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
+
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
 
-// int	main(void)
+// int main()
 // {
-// 	char	s1;
-// 	char	s2[100];
+//     char str[] = "Chara";
+//     char dst;
+//     int length = strlen(str - 1);
 
-// 	s1 = "Chara";
-// 	ft_strcpy(s2, s1);
-// 	printf("%s\n", s2);
-// 	return (0);
+//     printf("%s", ft_strncpy(&dst, str, length));
 // }

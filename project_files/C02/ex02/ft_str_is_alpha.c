@@ -1,37 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 10:14:18 by doberste          #+#    #+#             */
-/*   Updated: 2025/08/25 10:14:21 by doberste         ###   ########.fr       */
+/*   Created: 2025/08/26 10:19:56 by doberste          #+#    #+#             */
+/*   Updated: 2025/08/26 10:19:58 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, const char *src)
+int	ft_str_is_alpha(char *str);
+
+int	ft_str_is_alpha(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[i] >= 65 && str[i] <= 90)
+		{
+			i++;
+		}
+		else if (str[i] >= 97 && str[i] <= 122)
+		{
+			i++;
+		}
+		else
+		{
+			return (0);
+		}
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
 
 // int	main(void)
 // {
-// 	char	s1;
-// 	char	s2[100];
+// 	int result;
 
-// 	s1 = "Chara";
-// 	ft_strcpy(s2, s1);
-// 	printf("%s\n", s2);
-// 	return (0);
+// 	result = ft_str_is_alpha("Cha!ra");
+// 	printf("%i", result);
 // }
