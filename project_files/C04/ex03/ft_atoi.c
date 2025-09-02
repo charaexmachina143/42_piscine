@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/28 14:00:12 by doberste          #+#    #+#             */
-/*   Updated: 2025/09/01 13:10:09 by doberste         ###   ########.fr       */
+/*   Created: 2025/08/30 13:54:38 by doberste          #+#    #+#             */
+/*   Updated: 2025/08/31 14:33:59 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strstr(char *str, char *to_find);
-
-char	*ft_strstr(char *str, char *to_find)
+int	ft_atoi(char *str)
 {
 	int	i;
-	int	c;
-	int	o;
+	int	result;
+	int	is_neg;
 
-	o = 0;
-	c = 0;
+	is_neg = 0;
 	i = 0;
-	while (str[i])
+	result = 0;
+	while (str[i] && (str[i] < '0' || str[i] > '9'))
 	{
-		if (to_find[0] == '\0')
-			return (str);
-		while (str[i] == to_find[o])
-		{
-			i++;
-			o++;
-			if (to_find[o] == '\0')
-				return (&str[i - o]);
-		}
-		if (o != 0)
-			i--;
+		if (str[i] == '-')
+			is_neg++;
+		if (str[i] != ' ' && str[i] != '-' && str[i] != '+')
+			return (0);
 		i++;
-		o = 0;
 	}
-	return (0);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	if (is_neg % 2 == 1)
+	{
+		result = -result;
+	}
+	return (result);
 }
 
 // int	main(void)
 // {
-// 	char src[] = "charray";
-// 	char to_find[] = "ra";
-// 	printf("%s", ft_strstr(src, to_find));
+// 	int	a;
+
+// 	a = ft_atoi("abc123");
+// 	printf("%i", a);
 // }

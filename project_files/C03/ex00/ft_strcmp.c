@@ -9,30 +9,27 @@
 /*   Updated: 2025/08/27 14:47:11 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+// #include <stdio.h>
 
 int	ft_strcmp(char *s1, char *s2);
 
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	c;
 
-	c = 0;
 	i = 0;
-	while (s1[i] != s2[i])
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 	{
-		c = s1[i] - s2[i];
-		return (c);
 		i++;
 	}
-	return (c);
+	return ((unsigned int)s1[i] - (unsigned int)s2[i]);
 }
 
 // int	main(void)
 // {
-// 	char s1[] = "Chara";
-// 	char s2[] = "ChaRa";
+// 	char s1[] = " ";
+// 	char s2[] = "Ciara";
 
 // 	printf("%i", ft_strcmp(s1, s2));
 // }
