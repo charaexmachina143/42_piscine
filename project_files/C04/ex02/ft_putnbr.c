@@ -6,7 +6,7 @@
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:01:56 by doberste          #+#    #+#             */
-/*   Updated: 2025/08/30 12:58:11 by doberste         ###   ########.fr       */
+/*   Updated: 2025/08/31 14:18:47 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_putnbr(int nb)
 	if (nb < 0)
 	{
 		write(1, "-", 1);
-		nb = -nb;
 		n = (unsigned int)(-((long)nb));
 	}
 	else
@@ -73,5 +72,5 @@ int	ft_strlen(char *str)
 
 // int	main(void)
 // {
-// 	ft_putnbr(-2147483648);
+// 	ft_putnbr(-42);
 // }
