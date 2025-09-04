@@ -6,7 +6,7 @@
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 10:43:40 by doberste          #+#    #+#             */
-/*   Updated: 2025/09/04 10:53:09 by doberste         ###   ########.fr       */
+/*   Updated: 2025/09/04 11:00:53 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,14 @@ int	ft_strlen(char *str)
 
 int	main(int argc, char *argv[])
 {
-	int i;
-	i = argc - 1;
+	int	i;
 
+	i = argc - 1;
 	while (i > 0)
 	{
 		write(1, argv[i], ft_strlen(argv[i]));
 		write(1, "\n", 1);
 		i--;
 	}
-
 	return (0);
 }
