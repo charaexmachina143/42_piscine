@@ -6,7 +6,7 @@
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:01:56 by doberste          #+#    #+#             */
-/*   Updated: 2025/08/31 14:18:47 by doberste         ###   ########.fr       */
+/*   Updated: 2025/09/04 10:17:31 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	ft_putnbr(int nb)
 	ft_revstr(buff, i);
 	write(1, buff, i);
 }
+
 void	ft_revstr(char *str, int size)
 {
 	int	tmp;

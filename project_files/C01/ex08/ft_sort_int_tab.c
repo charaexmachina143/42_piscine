@@ -6,10 +6,9 @@
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 15:37:08 by doberste          #+#    #+#             */
-/*   Updated: 2025/08/24 15:37:11 by doberste         ###   ########.fr       */
+/*   Updated: 2025/09/04 10:17:46 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_sor_int_tab(int *tab, int size)
 {
@@ -40,15 +39,15 @@ void	ft_sor_int_tab(int *tab, int size)
 	}
 }
 
-int	main(void)
-{
-	int	a[] = {4, 3, 5, 6, 1, 2};
-	int	as;
+// int	main(void)
+// {
+// 	int	a[] = {4, 3, 5, 6, 1, 2};
+// 	int	as;
 
-	as = sizeof(a) / sizeof(a[0]);
-	ft_sor_int_tab(a, as);
-	for (int c = 0; c < as; c++)
-	{
-		printf("%i", a[c]);
-	}
-}
+// 	as = sizeof(a) / sizeof(a[0]);
+// 	ft_sor_int_tab(a, as);
+// 	for (int c = 0; c < as; c++)
+// 	{
+// 		printf("%i", a[c]);
+// 	}
+// }
