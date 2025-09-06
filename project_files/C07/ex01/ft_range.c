@@ -6,7 +6,7 @@
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 13:18:28 by doberste          #+#    #+#             */
-/*   Updated: 2025/09/06 13:59:31 by doberste         ###   ########.fr       */
+/*   Updated: 2025/09/06 14:29:58 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,25 @@ int *ft_range(int min, int max)
         i++;
         o++;
     }
-    if(min > max)
+    if(min > max || (max == 0 && min == 0))
     {
         return NULL;
     }
     return range;
 }
 
-int main()
-{
-    int min = -2147483647;
-    int max = 2147483647;
-    long long ic = max - min;
-    int *range = ft_range(min, max);
-    int i = 0; 
+// int main()
+// {
+//     int min = -2147483647;
+//     int max = 2147483647;
+//     long long ic = max - min;
+//     int *range = ft_range(min, max);
+//     int i = 0; 
 
-    while(i < ic)
-    {
-        printf("%i", range[i]);
-        i++;
-    }
+//     while(i < ic)
+//     {
+//         printf("%i", range[i]);
+//         i++;
+//     }
 
-}
+// }
