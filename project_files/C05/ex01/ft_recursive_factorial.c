@@ -6,7 +6,7 @@
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 16:30:57 by doberste          #+#    #+#             */
-/*   Updated: 2025/09/06 15:42:51 by doberste         ###   ########.fr       */
+/*   Updated: 2025/09/06 17:02:07 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,16 @@ int	ft_recursive_factorial(int nb)
 	int	n;
 	int	temp;
 
-	n = 1;
+
+	if (nb == 1)
+		return (nb);
 	if (nb == 0)
-	{
 		return (1);
-	}
 	if (nb < 0)
-	{
 		return (0);
-	}
-	if (n == 1)
-		n = nb - 1;
-	temp = nb;
-	while (n > 1)
-	{
-		temp = temp * n;
-		n--;
-	}
-	return (temp);
+	else
+		nb = nb * ft_recursive_factorial(nb - 1);
+	return (nb);
 }
 
 // int	main(void)
