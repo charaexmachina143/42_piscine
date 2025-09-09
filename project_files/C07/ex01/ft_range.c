@@ -6,7 +6,7 @@
 /*   By: doberste <doberste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 13:18:28 by doberste          #+#    #+#             */
-/*   Updated: 2025/09/06 14:33:00 by doberste         ###   ########.fr       */
+/*   Updated: 2025/09/09 15:16:01 by doberste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	*ft_range(int min, int max)
 	int	o;
 	int	i;
 
-	range = malloc(max - min);
+	range = malloc(max - min * 4);
 	o = min;
 	i = 0;
 	while (o < max)
@@ -39,8 +39,8 @@ int	*ft_range(int min, int max)
 
 // int main()
 // {
-//     int min = -2147483647;
-//     int max = 2147483647;
+//     int min = 4;
+//     int max = 7;
 //     long long ic = max - min;
 //     int *range = ft_range(min, max);
 //     int i = 0;
